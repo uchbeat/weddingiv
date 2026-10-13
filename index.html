@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ejiro & Chukwuebuka Wedding Celebration | 21.11.2027</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            DEFAULT: '#581825',
+                            dark: '#3d1019',
+                            light: '#722131'
+                        },
+                        champagne: {
+                            DEFAULT: '#D4AF37',
+                            light: '#E8D081',
+                            dark: '#B08D26'
+                        },
+                        ivory: {
+                            DEFAULT: '#FDFBF7',
+                            dark: '#F4EFE6'
+                        },
+                        warmbeige: '#EFECE6',
+                        charcoal: '#222222'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        script: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --burgundy: #581825;
+            --champagne: #D4AF37;
+            --ivory: #FDFBF7;
+            --warm-beige: #EFECE6;
+        }
+        
+        body {
+            background-color: var(--ivory);
+            color: #2c2c2c;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .font-script {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Traditional Pattern Overlay */
+        .traditional-pattern {
+            background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#D4AF37 0.75px, #FDFBF7 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.04;
+        }
+
+        /* Smooth floating particle animation */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+            100% { transform: translateY(0px) rotate(360deg); opacity: 0.8; }
+        }
+        .floating-particle {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+
+        /* Lightbox modal */
+        #lightbox {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-champagne selection:text-burgundy">
+
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-burgundy/95 backdrop-blur-md text-ivory py-4 px-6 md:px-12 border-b border-champagne/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#hero" class="flex items-center space-x-2">
+                <span class="font-script text-3xl md:text-4xl text-champagne">E & C</span>
+                <span class="text-xs tracking-widest uppercase hidden sm:inline text-ivory/80">| 21.11.2027</span>
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm tracking-wider uppercase font-medium">
+                <a href="#hero" class="hover:text-champagne transition-colors">Home</a>
+                <a href="#mystery-game" class="hover:text-champagne transition-colors flex items-center gap-1 text-champagne"><i class="fa-solid fa-gamepad"></i> Mystery Game</a>
+                <a href="#story" class="hover:text-champagne transition-colors">Our Story</a>
+                <a href="#programme" class="hover:text-champagne transition-colors">Programme</a>
+                <a href="#venue" class="hover:text-champagne transition-colors">Venue</a>
+                <a href="#dresscode" class="hover:text-champagne transition-colors">Dress Code</a>
+                <a href="#gallery" class="hover:text-champagne transition-colors">Gallery</a>
+                <a href="#rsvp" class="hover:text-champagne transition-colors bg-champagne text-burgundy px-4 py-2 rounded-full font-semibold hover:bg-champagne-light transition-all shadow-md">RSVP</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-champagne text-2xl focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-burgundy/98 border-b border-champagne/20 py-6 px-8 flex flex-col space-y-4 shadow-xl">
+            <a href="#hero" class="mobile-link text-ivory hover:text-champagne tracking-wider uppercase">Home</a>
+            <a href="#mystery-game" class="mobile-link text-champagne hover:text-ivory tracking-wider uppercase font-semibold"><i class="fa-solid fa-gamepad"></i> Mystery Game</a>
+            <a href="#story" class="mobile-link text-ivory hover:text-champagne tracking-wider uppercase">Our Story</a>
+            <a href="#programme" class="mobile-link text-ivory hover:text-champagne tracking-wider uppercase">Programme</a>
+            <a href="#venue" class="mobile-link text-ivory hover:text-champagne tracking-wider uppercase">Venue</a>
+            <a href="#dresscode" class="mobile-link text-ivory hover:text-champagne tracking-wider uppercase">Dress Code</a>
+            <a href="#gallery" class="mobile-link text-ivory hover:text-champagne tracking-wider uppercase">Gallery</a>
+            <a href="#rsvp" class="mobile-link bg-champagne text-burgundy text-center py-2.5 rounded-full font-semibold uppercase tracking-wider">RSVP Now</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-4 pt-20 overflow-hidden bg-burgundy-dark">
+        <!-- Background Image with Parallax & Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Nigerian couple in luxury traditional wedding attire" 
+                 class="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000"
+                 onerror="this.src='https://placehold.co/1920x1080/581825/D4AF37?text=The+Ejiro+and+Chukwuebuka+Wedding'">
+            <div class="absolute inset-0 bg-gradient-to-t from-burgundy-dark via-burgundy/70 to-black/60"></div>
+        </div>
+
+        <!-- Traditional Pattern Texture -->
+        <div class="absolute inset-0 traditional-pattern pointer-events-none z-10"></div>
+
+        <!-- Floating Petals / Particles -->
+        <div class="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+            <div class="absolute top-1/4 left-10 text-champagne text-xl floating-particle" style="animation-delay: 0s;">✦</div>
+            <div class="absolute top-1/3 right-16 text-champagne text-2xl floating-particle" style="animation-delay: 2s;">✧</div>
+            <div class="absolute bottom-1/4 left-1/4 text-champagne text-lg floating-particle" style="animation-delay: 4s;">✦</div>
+            <div class="absolute top-1/2 right-1/3 text-champagne text-xl floating-particle" style="animation-delay: 1.5s;">❀</div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 max-w-4xl mx-auto text-ivory py-12 flex flex-col items-center">
+            <span class="text-champagne uppercase tracking-[0.3em] text-xs md:text-sm font-semibold mb-3 px-4 py-1.5 rounded-full border border-champagne/40 bg-burgundy/40 backdrop-blur-sm">
+                The Royal Union of Delta State
+            </span>
+            <p class="font-script text-4xl md:text-6xl text-champagne mb-4 drop-shadow-md">Two Hearts, One Beautiful Journey</p>
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 text-ivory">
+                Ejiro <span class="font-script text-champagne font-normal text-5xl md:text-7xl">&</span> Chukwuebuka
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-ivory/90 max-w-2xl mx-auto font-light mb-10 leading-relaxed">
+                With immense joy and traditional grace, we invite you to celebrate our love story. Step into our world, unlock our mystery game, and join us as we tie the knot in Asaba.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                <a href="#mystery-game" class="group bg-champagne hover:bg-champagne-light text-burgundy font-semibold px-8 py-4 rounded-full shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3">
+                    <span>Unlock Our Love Story</span>
+                    <i class="fa-solid fa-key group-hover:rotate-45 transition-transform duration-300"></i>
+                </a>
+                <a href="#rsvp" class="bg-transparent hover:bg-ivory/10 text-ivory border-2 border-champagne/80 font-semibold px-8 py-3.5 rounded-full transition-all duration-300">
+                    Skip to RSVP
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center text-champagne animate-bounce">
+                <span class="text-xs uppercase tracking-widest mb-1 text-ivory/70">Scroll to Explore</span>
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="mystery-game" class="py-20 px-4 md:px-8 bg-ivory-dark relative">
+        <div class="max-w-4xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">Signature Experience</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">The Wedding Secret: Unlock Their Forever</h2>
+                <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                    Complete the interactive stages below to unlock all wedding details, discover the venue in Asaba, and earn your VIP Guest Badge!
+                </p>
+                
+                <!-- Game Progress Bar -->
+                <div class="mt-8 max-w-md mx-auto bg-warmbeige rounded-full h-3 overflow-hidden shadow-inner border border-champagne/30">
+                    <div id="game-progress-bar" class="bg-gradient-to-r from-champagne-dark to-champagne h-full w-[20%] transition-all duration-500 rounded-full"></div>
+                </div>
+                <p id="game-progress-text" class="text-xs text-gray-500 mt-2 font-medium">Stage 1 of 5: The Love Puzzle</p>
+            </div>
+
+            <!-- Game Container Card -->
+            <div class="bg-ivory rounded-3xl shadow-2xl border border-champagne/30 p-6 sm:p-10 relative overflow-hidden">
+                <!-- Decorative Watermark -->
+                <div class="absolute -right-10 -bottom-10 text-9xl text-champagne/1font-serif select-none pointer-events-none">E&C</div>
+
+                <!-- STAGE 1: The Love Puzzle -->
+                <div id="stage-1" class="game-stage space-y-6">
+                    <div class="flex items-center justify-between border-b border-champagne/20 pb-4">
+                        <span class="bg-burgundy text-champagne text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Stage 1</span>
+                        <span class="text-xs text-gray-500 font-medium"><i class="fa-solid fa-circle-question text-champagne"></i> Romantic Riddle</span>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-burgundy">The Love Puzzle</h3>
+                        <p class="text-gray-700 italic bg-warmbeige/60 p-4 rounded-xl border-l-4 border-champagne text-sm md:text-base">
+                            "From Delta's proud soil and traditional grace, two destined paths met in a warm embrace. When Ejiro's bright smile met Chukwuebuka's bold heart, what was the very first thing that united their start?"
+                        </p>
+                    </div>
+                    <div id="riddle-options" class="space-y-3">
+                        <button onclick="checkRiddle(0)" class="riddle-btn w-full text-left p-4 rounded-xl border border-champagne/40 bg-white hover:bg-burgundy hover:text-ivory transition-all shadow-sm font-medium text-sm md:text-base">
+                            A) A shared love for traditional Nigerian music at an Asaba cultural festival.
+                        </button>
+                        <button onclick="checkRiddle(1)" class="riddle-btn w-full text-left p-4 rounded-xl border border-champagne/40 bg-white hover:bg-burgundy hover:text-ivory transition-all shadow-sm font-medium text-sm md:text-base">
+                            B) A chance meeting over a spilled cup of Chapman at a mutual friend's engagement party.
+                        </button>
+                        <button onclick="checkRiddle(2)" class="riddle-btn w-full text-left p-4 rounded-xl border border-champagne/40 bg-white hover:bg-burgundy hover:text-ivory transition-all shadow-sm font-medium text-sm md:text-base">
+                            C) A spirited debate about Delta State history on a university campus in Lagos.
+                        </button>
+                    </div>
+                    <div id="riddle-feedback" class="text-sm font-semibold min-h-[24px]"></div>
+                    <div class="flex justify-between items-center pt-4">
+                        <button onclick="skipStage(1)" class="text-xs text-gray-500 hover:text-burgundy underline">Skip this puzzle</button>
+                    </div>
+                </div>
+
+                <!-- STAGE 2: Unlock the Couple's Names -->
+                <div id="stage-2" class="game-stage hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-champagne/20 pb-4">
+                        <span class="bg-burgundy text-champagne text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Stage 2</span>
+                        <span class="text-xs text-gray-500 font-medium"><i class="fa-solid fa-signature text-champagne"></i> Name Cipher</span>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-burgundy">Unlock the Couple's Names</h3>
+                        <p class="text-gray-700 text-sm md:text-base">
+                            Unscramble the letters to reveal the bride and groom's full names and unlock the royal crest.
+                        </p>
+                    </div>
+                    <div class="bg-warmbeige/50 p-6 rounded-2xl text-center border border-champagne/30 space-y-4">
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Scrambled Letters:</div>
+                        <div id="scrambled-letters" class="font-mono text-xl md:text-2xl font-bold text-burgundy tracking-widest bg-white py-3 px-4 rounded-xl shadow-inner inline-block">
+                            J I E R O & B U K A C H E W U K A
+                        </div>
+                        <div class="max-w-sm mx-auto space-y-3">
+                            <input type="text" id="name-input" placeholder="Enter Bride & Groom names..." class="w-full px-4 py-3 rounded-xl border border-champagne focus:ring-2 focus:ring-burgundy focus:outline-none text-center font-medium">
+                            <button onclick="checkNames()" class="w-full bg-burgundy hover:bg-burgundy-light text-ivory font-semibold py-3 rounded-xl shadow-md transition-all">
+                                Verify Names
+                            </button>
+                        </div>
+                    </div>
+                    <div id="name-feedback" class="text-center text-sm font-semibold"></div>
+                    <div class="flex justify-between items-center pt-4">
+                        <button onclick="skipStage(2)" class="text-xs text-gray-500 hover:text-burgundy underline">Skip to next stage</button>
+                    </div>
+                </div>
+
+                <!-- STAGE 3: Discover the Wedding Date -->
+                <div id="stage-3" class="game-stage hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-champagne/20 pb-4">
+                        <span class="bg-burgundy text-champagne text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Stage 3</span>
+                        <span class="text-xs text-gray-500 font-medium"><i class="fa-solid fa-calendar-days text-champagne"></i> Date Cipher</span>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-burgundy">Discover the Wedding Date</h3>
+                        <p class="text-gray-700 text-sm md:text-base">
+                            Select the correct grand wedding date for Ejiro & Chukwuebuka in November 2027:
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <button onclick="checkDate('2027-11-14')" class="date-card p-4 rounded-2xl border border-champagne/40 bg-white hover:bg-burgundy hover:text-ivory transition-all text-center shadow-sm">
+                            <div class="text-xs uppercase tracking-widest text-champagne font-bold mb-1">Sunday</div>
+                            <div class="text-2xl font-serif font-bold">14 Nov 2027</div>
+                        </button>
+                        <button onclick="checkDate('2027-11-21')" class="date-card p-4 rounded-2xl border border-champagne/40 bg-white hover:bg-burgundy hover:text-ivory transition-all text-center shadow-sm">
+                            <div class="text-xs uppercase tracking-widest text-champagne font-bold mb-1">Sunday</div>
+                            <div class="text-2xl font-serif font-bold">21 Nov 2027</div>
+                        </button>
+                        <button onclick="checkDate('2027-11-28')" class="date-card p-4 rounded-2xl border border-champagne/40 bg-white hover:bg-burgundy hover:text-ivory transition-all text-center shadow-sm">
+                            <div class="text-xs uppercase tracking-widest text-champagne font-bold mb-1">Sunday</div>
+                            <div class="text-2xl font-serif font-bold">28 Nov 2027</div>
+                        </button>
+                    </div>
+                    <div id="date-feedback" class="text-center text-sm font-semibold"></div>
+                    <div class="flex justify-between items-center pt-4">
+                        <button onclick="skipStage(3)" class="text-xs text-gray-500 hover:text-burgundy underline">Skip date puzzle</button>
+                    </div>
+                </div>
+
+                <!-- STAGE 4: Reveal the Colours of the Day -->
+                <div id="stage-4" class="game-stage hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-champagne/20 pb-4">
+                        <span class="bg-burgundy text-champagne text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Stage 4</span>
+                        <span class="text-xs text-gray-500 font-medium"><i class="fa-solid fa-palette text-champagne"></i> Colour Matching</span>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-burgundy">Reveal the Colours of the Day</h3>
+                        <p class="text-gray-700 text-sm md:text-base">
+                            Select the 3 official luxury wedding palette swatches in the correct order to reveal the dress code guidelines.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div onclick="selectSwatch('Burgundy')" class="swatch-item cursor-pointer p-4 rounded-2xl border-2 border-champagne/40 bg-burgundy text-ivory hover:scale-105 transition-all shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-white/20 mx-auto mb-2 flex items-center justify-center font-bold">1</div>
+                            <span class="font-serif font-semibold text-sm">Burgundy</span>
+                        </div>
+                        <div onclick="selectSwatch('Champagne Gold')" class="swatch-item cursor-pointer p-4 rounded-2xl border-2 border-champagne/40 bg-champagne text-burgundy hover:scale-105 transition-all shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-burgundy/15 mx-auto mb-2 flex items-center justify-center font-bold">2</div>
+                            <span class="font-serif font-semibold text-sm">Champagne Gold</span>
+                        </div>
+                        <div onclick="selectSwatch('Ivory')" class="swatch-item cursor-pointer p-4 rounded-2xl border-2 border-champagne/40 bg-ivory text-burgundy hover:scale-105 transition-all shadow-md">
+                            <div class="w-10 h-10 rounded-full bg-burgundy/15 mx-auto mb-2 flex items-center justify-center font-bold">3</div>
+                            <span class="font-serif font-semibold text-sm">Ivory</span>
+                        </div>
+                    </div>
+                    <div id="swatch-feedback" class="text-center text-sm font-semibold"></div>
+                    <div class="text-center pt-2">
+                        <button onclick="completeStage4()" class="bg-champagne hover:bg-champagne-light text-burgundy font-semibold px-6 py-2.5 rounded-full text-sm shadow-md transition-all">
+                            Confirm Colours & Reveal Dress Code
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center pt-4">
+                        <button onclick="skipStage(4)" class="text-xs text-gray-500 hover:text-burgundy underline">Skip colour game</button>
+                    </div>
+                </div>
+
+                <!-- STAGE 5: The Final Invitation Card -->
+                <div id="stage-5" class="game-stage hidden space-y-6 text-center">
+                    <div class="inline-block bg-champagne/20 text-burgundy px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-2">
+                        🎉 Mystery Completed Successfully!
+                    </div>
+                    <h3 class="font-serif text-3xl md:text-4xl font-bold text-burgundy">You've Unlocked Their Forever!</h3>
+                    <p class="text-gray-600 max-w-lg mx-auto text-sm md:text-base">
+                        Congratulations! You have unlocked the full royal wedding invitation. You have also earned the <span class="font-bold text-burgundy">"Love Explorer"</span> virtual badge.
+                    </p>
+
+                    <!-- Digital Invitation Card Preview -->
+                    <div class="bg-burgundy text-ivory p-8 rounded-3xl shadow-2xl border-2 border-champagne relative overflow-hidden text-left max-w-2xl mx-auto my-6">
+                        <div class="absolute inset-0 traditional-pattern pointer-events-none"></div>
+                        <div class="relative z-10 space-y-6 text-center">
+                            <span class="text-champagne uppercase tracking-[0.3em] text-xs font-semibold">Official Invitation Card</span>
+                            <h4 class="font-script text-4xl md:text-5xl text-champagne">The Wedding Celebration</h4>
+                            <div class="font-serif text-2xl md:text-3xl font-bold text-ivory">
+                                Ejiro Oghenevwede <span class="font-script text-champagne">&</span> Chukwuebuka Okafor
+                            </div>
+                            <div class="border-t border-b border-champagne/30 py-4 my-4 space-y-2 text-sm md:text-base">
+                                <p><strong class="text-champagne">Date:</strong> Sunday, 21 November 2027</p>
+                                <p><strong class="text-champagne">Traditional Wedding:</strong> 10:00 AM | Asaba, Delta State</p>
+                                <p><strong class="text-champagne">Reception:</strong> 2:00 PM | Luxury Event Centre, Asaba</p>
+                                <p><strong class="text-champagne">Dress Code:</strong> Burgundy, Champagne Gold & Ivory</p>
+                            </div>
+                            <p class="font-script text-2xl text-champagne">We cannot wait to celebrate with you!</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap justify-center gap-4 pt-4">
+                        <a href="#rsvp" class="bg-champagne hover:bg-champagne-light text-burgundy font-semibold px-6 py-3 rounded-full shadow-lg transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-envelope-open-text"></i> RSVP Now
+                        </a>
+                        <button onclick="downloadICS()" class="bg-burgundy hover:bg-burgundy-light text-ivory font-semibold px-6 py-3 rounded-full shadow-lg transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-plus"></i> Add to Calendar
+                        </button>
+                        <button onclick="shareInvitation()" class="bg-warmbeige hover:bg-gray-300 text-burgundy font-semibold px-6 py-3 rounded-full shadow-md transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-share-nodes"></i> Share Invitation
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-burgundy text-ivory text-center relative overflow-hidden">
+        <div class="absolute inset-0 traditional-pattern pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <h3 class="font-serif text-2xl md:text-3xl font-bold text-champagne mb-6">Countdown to Forever</h3>
+            <div id="countdown-timer" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl mx-auto">
+                <div class="bg-burgundy-dark/80 border border-champagne/30 p-4 rounded-2xl shadow-md">
+                    <div id="days" class="text-3xl md:text-4xl font-bold text-champagne font-serif">000</div>
+                    <div class="text-xs uppercase tracking-widest text-ivory/80 mt-1">Days</div>
+                </div>
+                <div class="bg-burgundy-dark/80 border border-champagne/30 p-4 rounded-2xl shadow-md">
+                    <div id="hours" class="text-3xl md:text-4xl font-bold text-champagne font-serif">00</div>
+                    <div class="text-xs uppercase tracking-widest text-ivory/80 mt-1">Hours</div>
+                </div>
+                <div class="bg-burgundy-dark/80 border border-champagne/30 p-4 rounded-2xl shadow-md">
+                    <div id="minutes" class="text-3xl md:text-4xl font-bold text-champagne font-serif">00</div>
+                    <div class="text-xs uppercase tracking-widest text-ivory/80 mt-1">Minutes</div>
+                </div>
+                <div class="bg-burgundy-dark/80 border border-champagne/30 p-4 rounded-2xl shadow-md">
+                    <div id="seconds" class="text-3xl md:text-4xl font-bold text-champagne font-serif">00</div>
+                    <div class="text-xs uppercase tracking-widest text-ivory/80 mt-1">Seconds</div>
+                </div>
+            </div>
+            <div class="mt-8 flex justify-center items-center gap-3">
+                <span class="text-xs uppercase tracking-widest text-ivory/80 font-medium">Official Hashtag:</span>
+                <button onclick="copyHashtag()" class="bg-champagne/20 border border-champagne text-champagne font-mono font-bold px-4 py-1.5 rounded-full hover:bg-champagne hover:text-burgundy transition-all flex items-center gap-2 text-sm">
+                    <span>#EjiroAndChukwuebuka2027</span>
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+            <p id="hashtag-feedback" class="text-xs text-champagne mt-2 h-4"></p>
+        </div>
+    </section>
+
+    <section id="story" class="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">How We Met</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">Our Love Story</h2>
+            <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                A tale woven with laughter, cultural heritage, and destiny in the heart of Delta State.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-champagne uppercase tracking-widest">Chapter One</span>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-burgundy">The Fateful Encounter in Asaba</h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                    It was during a vibrant cultural celebration in Asaba that Ejiro’s radiant smile first caught Chukwuebuka’s attention. Amidst the lively beats of traditional drums and joyful conversations, their eyes locked across the courtyard.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                    What began as a polite introduction blossomed into endless phone calls, shared dreams, and deep respect for each other's heritage. Whether discussing family traditions or enjoying quiet weekends, they knew they had found their lifelong partner.
+                </p>
+                <div class="p-4 bg-warmbeige/70 rounded-2xl border-l-4 border-burgundy italic text-gray-800 text-sm">
+                    "True love stories never have endings. Today, we write our grandest chapter yet." — Ejiro & Chukwuebuka
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Ejiro portrait" class="rounded-3xl shadow-lg object-cover w-full h-64 md:h-80 transform hover:scale-105 transition-all">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Chukwuebuka portrait" class="rounded-3xl shadow-lg object-cover w-full h-64 md:h-80 transform hover:scale-105 transition-all mt-8">
+            </div>
+        </div>
+    </section>
+
+    <section id="programme" class="py-20 px-4 md:px-8 bg-ivory-dark">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">Event Schedule</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">Wedding Programme</h2>
+                <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                    Join us for our traditional rites and grand reception celebration in Asaba. (Editable sample programme details).
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-1/2 before:w-0.5 before:bg-champagne/40 before:-translate-x-1/2">
+                <!-- Timeline Item 1 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                        <span class="text-xs font-bold text-champagne bg-burgundy px-3 py-1 rounded-full uppercase tracking-wider">10:00 AM</span>
+                        <h4 class="font-serif text-xl font-bold text-burgundy mt-2">Traditional Wedding Ceremony</h4>
+                        <p class="text-gray-600 text-sm mt-1">Cultural rites, family introductions, and the vibrant joining of the families.</p>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-champagne border-4 border-ivory-dark flex items-center justify-center text-burgundy shadow-md z-10">
+                        <i class="fa-solid fa-ring text-xs"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12"></div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-champagne border-4 border-ivory-dark flex items-center justify-center text-burgundy shadow-md z-10">
+                        <i class="fa-solid fa-camera text-xs"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+                        <span class="text-xs font-bold text-champagne bg-burgundy px-3 py-1 rounded-full uppercase tracking-wider">12:30 PM</span>
+                        <h4 class="font-serif text-xl font-bold text-burgundy mt-2">Family Photographs & Congratulations</h4>
+                        <p class="text-gray-600 text-sm mt-1">Capture memorable moments with the couple and extended families.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                        <span class="text-xs font-bold text-champagne bg-burgundy px-3 py-1 rounded-full uppercase tracking-wider">2:00 PM</span>
+                        <h4 class="font-serif text-xl font-bold text-burgundy mt-2">Grand Reception Celebration</h4>
+                        <p class="text-gray-600 text-sm mt-1">Red carpet arrival, sumptuous banquet, toasts, and couple's first dance.</p>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-champagne border-4 border-ivory-dark flex items-center justify-center text-burgundy shadow-md z-10">
+                        <i class="fa-solid fa-champagne-glasses text-xs"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12"></div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-champagne border-4 border-ivory-dark flex items-center justify-center text-burgundy shadow-md z-10">
+                        <i class="fa-solid fa-music text-xs"></i>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <span class="text-xs font-bold text-champagne bg-burgundy px-3 py-1 rounded-full uppercase tracking-wider">4:00 PM</span>
+                        <h4 class="font-serif text-xl font-bold text-burgundy mt-2">Music, Dancing & Entertainment</h4>
+                        <p class="text-gray-600 text-sm mt-1">Live band, DJ performances, money spraying, and open dance floor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="venue" class="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">Location & Directions</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">Asaba, Delta State, Nigeria</h2>
+            <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                Both the traditional ceremony and grand reception will take place in the serene and luxurious capital city of Delta State.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Traditional Venue Card -->
+            <div class="bg-ivory rounded-3xl shadow-xl border border-champagne/30 p-8 space-y-6 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs uppercase font-bold text-champagne-dark bg-champagne/10 px-3 py-1 rounded-full">Traditional Rites</span>
+                    <h3 class="font-serif text-2xl font-bold text-burgundy mt-3">Grand Event Pavilion, Asaba</h3>
+                    <p class="text-gray-600 text-sm mt-2">
+                        A breathtaking traditional venue featuring lush gardens and spacious halls, located in GRA, Asaba, Delta State.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-champagne/20 flex items-center justify-between">
+                    <span class="text-xs text-gray-500"><i class="fa-solid fa-clock text-champagne"></i> 10:00 AM Sharp</span>
+                    <a href="https://maps.google.com/?q=Asaba+Delta+State+Nigeria" target="_blank" rel="noopener noreferrer" class="bg-burgundy text-ivory hover:bg-burgundy-light px-4 py-2 rounded-full text-xs font-semibold shadow-md transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-map-location-dot"></i> Open Map
+                    </a>
+                </div>
+            </div>
+
+            <!-- Reception Venue Card -->
+            <div class="bg-ivory rounded-3xl shadow-xl border border-champagne/30 p-8 space-y-6 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs uppercase font-bold text-champagne-dark bg-champagne/10 px-3 py-1 rounded-full">Reception Banquet</span>
+                    <h3 class="font-serif text-2xl font-bold text-burgundy mt-3">The Imperial Ballroom, Asaba</h3>
+                    <p class="text-gray-600 text-sm mt-2">
+                        Our luxury reception venue equipped with state-of-the-art lighting, air conditioning, and elite security.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-champagne/20 flex items-center justify-between">
+                    <span class="text-xs text-gray-500"><i class="fa-solid fa-clock text-champagne"></i> 2:00 PM</span>
+                    <a href="https://maps.google.com/?q=Asaba+Delta+State+Nigeria" target="_blank" rel="noopener noreferrer" class="bg-burgundy text-ivory hover:bg-burgundy-light px-4 py-2 rounded-full text-xs font-semibold shadow-md transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-map-location-dot"></i> Open Map
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dresscode" class="py-20 px-4 md:px-8 bg-burgundy text-ivory relative overflow-hidden">
+        <div class="absolute inset-0 traditional-pattern pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto relative z-10 text-center">
+            <span class="text-champagne uppercase tracking-[0.2em] text-xs font-bold block mb-2">Style Guidelines</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-champagne mb-4">Colours of the Day</h2>
+            <p class="text-ivory/80 max-w-xl mx-auto text-sm md:text-base mb-12">
+                We invite our cherished guests to dress in our official wedding palette to create a harmonious and visually stunning celebration.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Burgundy Swatch -->
+                <div class="bg-burgundy-dark/90 border border-champagne/30 rounded-3xl p-6 text-center shadow-xl space-y-4">
+                    <div class="w-24 h-24 rounded-full bg-[#581825] border-4 border-champagne mx-auto shadow-inner"></div>
+                    <h3 class="font-serif text-xl font-bold text-champagne">Burgundy</h3>
+                    <p class="text-xs font-mono text-ivory/70">HEX: #581825</p>
+                    <p class="text-xs text-ivory/80">Primary traditional attire accent & royal depth.</p>
+                </div>
+                <!-- Champagne Gold Swatch -->
+                <div class="bg-burgundy-dark/90 border border-champagne/30 rounded-3xl p-6 text-center shadow-xl space-y-4">
+                    <div class="w-24 h-24 rounded-full bg-[#D4AF37] border-4 border-burgundy mx-auto shadow-inner"></div>
+                    <h3 class="font-serif text-xl font-bold text-champagne">Champagne Gold</h3>
+                    <p class="text-xs font-mono text-ivory/70">HEX: #D4AF37</p>
+                    <p class="text-xs text-ivory/80">Aso-ebi gele, caps, and sparkling metallic touches.</p>
+                </div>
+                <!-- Ivory Swatch -->
+                <div class="bg-burgundy-dark/90 border border-champagne/30 rounded-3xl p-6 text-center shadow-xl space-y-4">
+                    <div class="w-24 h-24 rounded-full bg-[#FDFBF7] border-4 border-champagne mx-auto shadow-inner"></div>
+                    <h3 class="font-serif text-xl font-bold text-champagne">Ivory</h3>
+                    <p class="text-xs font-mono text-ivory/70">HEX: #FDFBF7</p>
+                    <p class="text-xs text-ivory/80">Crisp ceremonial elegance and base attire.</p>
+                </div>
+            </div>
+
+            <div class="inline-block bg-burgundy-dark border border-champagne/40 px-6 py-4 rounded-2xl text-sm text-ivory/90">
+                <strong class="text-champagne">Note for Guests:</strong> Aso-Ebi packages and designated family colors are available upon request when contacting the wedding coordinators.
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">Visual Moments</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">Wedding Gallery</h2>
+            <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                Glimpses of love, joy, and rich Nigerian wedding elegance. Click any image to view in full size.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="overflow-hidden rounded-3xl shadow-lg cursor-pointer group relative h-72" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Couple portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <span class="text-ivory font-serif text-lg">Traditional Elegance</span>
+                </div>
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-lg cursor-pointer group relative h-72" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Bride smiling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <span class="text-ivory font-serif text-lg">The Radiant Bride</span>
+                </div>
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-lg cursor-pointer group relative h-72" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Reception decor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <span class="text-ivory font-serif text-lg">Luxury Reception Setup</span>
+                </div>
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-lg cursor-pointer group relative h-72" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Groom portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <span class="text-ivory font-serif text-lg">The Groom</span>
+                </div>
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-lg cursor-pointer group relative h-72" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Couple dancing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <span class="text-ivory font-serif text-lg">First Dance</span>
+                </div>
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-lg cursor-pointer group relative h-72" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Floral details" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                    <span class="text-ivory font-serif text-lg">Floral & Decor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-champagne text-3xl focus:outline-none hover:text-ivory">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged wedding photo" class="max-w-full max-h-[85vh] object-contain rounded-2xl border-2 border-champagne">
+    </div>
+
+    <section id="rsvp" class="py-20 px-4 md:px-8 bg-ivory-dark">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">Be Our Guest</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">RSVP Your Attendance</h2>
+                <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                    Please confirm your attendance by <span class="font-bold text-burgundy">1 November 2027</span> so we can reserve your seat.
+                </p>
+            </div>
+
+            <!-- RSVP Form Card -->
+            <div class="bg-ivory rounded-3xl shadow-2xl border border-champagne/30 p-6 sm:p-10">
+                <form id="rsvp-form" onsubmit="handleRSVP(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-burgundy">Full Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="rsvp-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-burgundy">Email Address or Phone <span class="text-red-500">*</span></label>
+                            <input type="text" id="rsvp-contact" required placeholder="email@example.com or phone number" class="w-full px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-burgundy">Attendance Status <span class="text-red-500">*</span></label>
+                            <select id="rsvp-status" required class="w-full px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm">
+                                <option value="">Select your response</option>
+                                <option value="Joyfully Accepted">Joyfully Accepted (Will Attend)</option>
+                                <option value="Regretfully Declined">Regretfully Declined (Cannot Attend)</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-burgundy">Number of Guests</label>
+                            <select id="rsvp-guests" class="w-full px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm">
+                                <option value="1">1 Guest (Just Me)</option>
+                                <option value="2">2 Guests (Plus One)</option>
+                                <option value="Family">Family Table (3+)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-burgundy">Congratulatory Message for Ejiro & Chukwuebuka</label>
+                        <textarea id="rsvp-message" rows="4" placeholder="Leave your warm wishes here..." class="w-full px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-burgundy hover:bg-burgundy-light text-ivory font-semibold py-4 rounded-xl shadow-lg transition-all tracking-wider uppercase text-sm">
+                        Submit RSVP Response
+                    </button>
+                </form>
+
+                <!-- Feedback Box -->
+                <div id="rsvp-feedback" class="mt-6 hidden p-4 rounded-2xl bg-warmbeige text-burgundy text-center text-sm font-medium border border-champagne/30"></div>
+                
+                <p class="text-xs text-gray-500 text-center mt-4">
+                    Note: Frontend demo preview mode. To collect responses permanently, connect this form to a backend service or database.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 md:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">Guestbook</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">Wedding Wishes Wall</h2>
+            <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                Leave a congratulatory note for the couple. Your message will appear below instantly during this browser session.
+            </p>
+        </div>
+
+        <div class="bg-ivory rounded-3xl shadow-xl border border-champagne/30 p-6 sm:p-8 mb-10">
+            <form id="guestbook-form" onsubmit="handleGuestbook(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" id="guestbook-author" required placeholder="Your Name" class="px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm">
+                    <input type="text" id="guestbook-relation" placeholder="Relation (e.g., Friend of Groom)" class="px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm">
+                </div>
+                <textarea id="guestbook-text" required rows="3" placeholder="Write your heartfelt wish for Ejiro & Chukwuebuka..." class="w-full px-4 py-3 rounded-xl border border-champagne/40 focus:ring-2 focus:ring-burgundy focus:outline-none bg-white text-sm"></textarea>
+                <button type="submit" class="bg-champagne hover:bg-champagne-light text-burgundy font-semibold px-6 py-3 rounded-xl shadow-md transition-all text-sm">
+                    Post to Wishes Wall
+                </button>
+            </form>
+        </div>
+
+        <!-- Wishes Container -->
+        <div id="wishes-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Dynamic wishes inserted via JS -->
+        </div>
+    </section>
+
+    <section class="py-20 px-4 md:px-8 bg-ivory-dark">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-champagne-dark uppercase tracking-[0.2em] text-xs font-bold block mb-2">Common Questions</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-burgundy mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+                    Everything you need to know about attending our wedding celebration in Asaba.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-ivory rounded-2xl border border-champagne/30 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-serif font-bold text-burgundy flex justify-between items-center focus:outline-none">
+                        <span>What is the official RSVP deadline?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm">
+                        Please submit your RSVP response by 1 November 2027 so we can finalize catering and seating arrangements.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-ivory rounded-2xl border border-champagne/30 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-serif font-bold text-burgundy flex justify-between items-center focus:outline-none">
+                        <span>Are children allowed at the wedding?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm">
+                        While we love your little ones, our reception is primarily an adult-only celebration, except for immediate family flower girls and ring bearers. Thank you for understanding.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-ivory rounded-2xl border border-champagne/30 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-serif font-bold text-burgundy flex justify-between items-center focus:outline-none">
+                        <span>Can I bring a plus one?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm">
+                        Due to venue capacity, we can only accommodate guests specifically listed on your invitation or designated in your RSVP confirmation.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-ivory rounded-2xl border border-champagne/30 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-serif font-bold text-burgundy flex justify-between items-center focus:outline-none">
+                        <span>What time should I arrive at the venue?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm">
+                        For the traditional ceremony, we recommend arriving by 10:00 AM. For the reception, doors open at 2:00 PM.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-burgundy-dark text-ivory py-16 px-6 md:px-12 border-t border-champagne/30 relative overflow-hidden">
+        <div class="absolute inset-0 traditional-pattern pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto relative z-10 flex flex-col items-center text-center space-y-6">
+            <span class="font-script text-5xl text-champagne">Ejiro & Chukwuebuka</span>
+            <p class="text-xs uppercase tracking-[0.3em] text-ivory/80">#EjiroAndChukwuebuka2027 • 21 November 2027 • Asaba, Delta State</p>
+            <div class="w-24 h-0.5 bg-champagne/40"></div>
+            <p class="text-xs text-ivory/60 max-w-md">
+                Designed with luxury editorial elegance and Nigerian romance. All fictional placeholder details can be edited easily by developers.
+            </p>
+            <div class="text-xs text-champagne pt-4">
+                &copy; 2027 The Ejiro & Chukwuebuka Wedding Celebration. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ==========================================
+           WEDDING CONFIGURATION OBJECT
+           ========================================== */
+        const WEDDING_CONFIG = {
+            groom: "Chukwuebuka Okafor",
+            bride: "Ejiro Oghenevwede",
+            title: "The Ejiro & Chukwuebuka Wedding Celebration",
+            date: "2027-11-21T10:00:00",
+            traditionalVenue: "Grand Event Pavilion, Asaba, Delta State",
+            receptionVenue: "The Imperial Ballroom, Asaba, Delta State",
+            dressCode: ["Burgundy", "Champagne Gold", "Ivory"],
+            hashtag: "#EjiroAndChukwuebuka2027",
+            rsvpDeadline: "2027-11-01"
+        };
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        /* ==========================================
+           MYSTERY GAME LOGIC
+           ========================================== */
+        let currentGameStage = 1;
+        let userBadges = JSON.parse(localStorage.getItem('wedding_badges')) || [];
+
+        function updateGameProgress(stage) {
+            currentGameStage = stage;
+            const progressBar = document.getElementById('game-progress-bar');
+            const progressText = document.getElementById('game-progress-text');
+            
+            const percentages = { 1: '20%', 2: '40%', 3: '60%', 4: '80%', 5: '100%' };
+            const titles = {
+                1: 'Stage 1 of 5: The Love Puzzle',
+                2: 'Stage 2 of 5: Unlock the Couple\'s Names',
+                3: 'Stage 3 of 5: Discover the Wedding Date',
+                4: 'Stage 4 of 5: Reveal the Colours of the Day',
+                5: 'Stage 5 of 5: The Final Invitation Unlocked!'
+            };
+
+            progressBar.style.width = percentages[stage];
+            progressText.textContent = titles[stage];
+
+            // Hide all stages
+            document.querySelectorAll('.game-stage').forEach(el => el.classList.add('hidden'));
+            // Show current stage
+            document.getElementById(`stage-${stage}`).classList.remove('hidden');
+
+            // Award badges
+            if(stage === 3 && !userBadges.includes('Love Explorer')) {
+                userBadges.push('Love Explorer');
+                localStorage.setItem('wedding_badges', JSON.stringify(userBadges));
+            }
+            if(stage === 5 && !userBadges.includes('Wedding Style Expert')) {
+                userBadges.push('Wedding Style Expert');
+                localStorage.setItem('wedding_badges', JSON.stringify(userBadges));
+            }
+        }
+
+        // Stage 1: Riddle
+        function checkRiddle(optionIndex) {
+            const feedback = document.getElementById('riddle-feedback');
+            if (optionIndex === 1) {
+                feedback.className = "text-sm font-semibold text-green-600";
+                feedback.textContent = "Correct! Their magical journey began over Chapman at an engagement party.";
+                setTimeout(() => {
+                    updateGameProgress(2);
+                }, 1200);
+            } else {
+                feedback.className = "text-sm font-semibold text-red-500";
+                feedback.textContent = "Not quite! Hint: Think of a refreshing drink shared among friends in Asaba. Try again!";
+            }
+        }
+
+        // Stage 2: Names
+        function checkNames() {
+            const input = document.getElementById('name-input').value.trim().toLowerCase();
+            const feedback = document.getElementById('name-feedback');
+            if (input.includes('ejiro') && input.includes('chukwuebuka')) {
+                feedback.className = "text-sm font-semibold text-green-600";
+                feedback.textContent = "Magnificent! Names verified successfully.";
+                setTimeout(() => {
+                    updateGameProgress(3);
+                }, 1200);
+            } else {
+                feedback.className = "text-sm font-semibold text-red-500";
+                feedback.textContent = "Please ensure both Ejiro and Chukwuebuka are included in your input.";
+            }
+        }
+
+        // Stage 3: Date
+        function checkDate(selectedDate) {
+            const feedback = document.getElementById('date-feedback');
+            if (selectedDate === '2027-11-21') {
+                feedback.className = "text-sm font-semibold text-green-600";
+                feedback.textContent = "Spot on! Sunday, 21 November 2027 is the grand day.";
+                setTimeout(() => {
+                    updateGameProgress(4);
+                }, 1200);
+            } else {
+                feedback.className = "text-sm font-semibold text-red-500";
+                feedback.textContent = "Incorrect date. Hint: It falls on the third Sunday of November 2027.";
+            }
+        }
+
+        // Stage 4: Colours
+        let selectedSwatchesCount = 0;
+        function selectSwatch(swatchName) {
+            selectedSwatchesCount++;
+            const feedback = document.getElementById('swatch-feedback');
+            feedback.className = "text-sm font-semibold text-green-600";
+            feedback.textContent = `Swatch "${swatchName}" selected (${selectedSwatchesCount}/3). Click confirm when ready!`;
+        }
+
+        function completeStage4() {
+            updateGameProgress(5);
+        }
+
+        function skipStage(stageNum) {
+            updateGameProgress(stageNum + 1);
+        }
+
+        /* ==========================================
+           LIVE COUNTDOWN TIMER
+           ========================================== */
+        const weddingDate = new Date(WEDDING_CONFIG.date).getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown-timer').innerHTML = "<div class='col-span-4 text-2xl font-serif font-bold text-champagne'>The Wedding Day is Here!</div>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(3, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        /* ==========================================
+           COPY HASHTAG
+           ========================================== */
+        function copyHashtag() {
+            const hashtagText = WEDDING_CONFIG.hashtag;
+            const feedback = document.getElementById('hashtag-feedback');
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(hashtagText).then(() => {
+                    feedback.textContent = "Hashtag copied to clipboard!";
+                    setTimeout(() => feedback.textContent = "", 3000);
+                }).catch(() => fallbackCopy(hashtagText, feedback));
+            } else {
+                fallbackCopy(hashtagText, feedback);
+            }
+        }
+
+        function fallbackCopy(text, feedbackEl) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                feedbackEl.textContent = "Hashtag copied to clipboard!";
+            } catch (err) {
+                feedbackEl.textContent = "Failed to copy hashtag.";
+            }
+            document.body.removeChild(textArea);
+            setTimeout(() => feedbackEl.textContent = "", 3000);
+        }
+
+        /* ==========================================
+           ADD TO CALENDAR (.ICS FILE GENERATION)
+           ========================================== */
+        function downloadICS() {
+            const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ejiro & Chukwuebuka Wedding//EN
+BEGIN:VEVENT
+SUMMARY:The Ejiro & Chukwuebuka Wedding Celebration
+DESCRIPTION:Traditional ceremony and reception in Asaba, Delta State. Official hashtag: #EjiroAndChukwuebuka2027
+LOCATION:Asaba, Delta State, Nigeria
+DTSTART:20271121T090000Z
+DTEND:20271121T220000Z
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Ejiro_And_Chukwuebuka_Wedding.ics';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        /* ==========================================
+           WEB SHARE API / COPY LINK
+           ========================================== */
+        function shareInvitation() {
+            if (navigator.share) {
+                navigator.share({
+                    title: WEDDING_CONFIG.title,
+                    text: 'Join us for the royal wedding celebration of Ejiro & Chukwuebuka in Asaba, Delta State on 21 November 2027!',
+                    url: window.location.href,
+                }).catch(() => {});
+            } else {
+                const feedback = document.getElementById('hashtag-feedback');
+                if(navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert("Invitation link copied to clipboard!");
+                } else {
+                    alert("Share link: " + window.location.href);
+                }
+            }
+        }
+
+        /* ==========================================
+           LIGHTBOX GALLERY
+           ========================================== */
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        /* ==========================================
+           RSVP FORM HANDLER
+           ========================================== */
+        function handleRSVP(event) {
+            event.preventDefault();
+            const name = document.getElementById('rsvp-name').value;
+            const status = document.getElementById('rsvp-status').value;
+            const guests = document.getElementById('rsvp-guests').value;
+            const feedback = document.getElementById('rsvp-feedback');
+
+            feedback.classList.remove('hidden');
+            feedback.innerHTML = `Thank you, <strong class="text-burgundy">${name}</strong>! Your response (<span class="text-burgundy font-bold">${status}</span> for ${guests} guest(s)) has been recorded for this demo session.<br><span class="text-xs text-gray-500 mt-1 block">To save responses permanently, please connect this form to a backend database or email service.</span>`;
+            
+            document.getElementById('rsvp-form').reset();
+        }
+
+        /* ==========================================
+           DIGITAL GUESTBOOK / WISHES WALL
+           ========================================== */
+        let guestbookWishes = JSON.parse(localStorage.getItem('wedding_wishes')) || [
+            { author: "Dr. & Mrs. Adeleke", relation: "Family Friend", text: "Wishing you both a lifetime of divine joy, peace, and abundant blessings in Asaba!" },
+            { author: "Nkechi & Emeka", relation: "College Classmates", text: "Congratulations Ejiro & Chukwuebuka! May your home be filled with endless laughter." }
+        ];
+
+        function renderWishes() {
+            const container = document.getElementById('wishes-container');
+            container.innerHTML = '';
+            guestbookWishes.slice().reverse().forEach(wish => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl shadow-sm border border-champagne/20 flex flex-col justify-between space-y-3";
+                card.innerHTML = `
+                    <p class="text-gray-700 italic text-sm">"${wish.text}"</p>
+                    <div class="border-t border-gray-100 pt-3 flex justify-between items-center text-xs">
+                        <span class="font-bold text-burgundy">${wish.author}</span>
+                        <span class="text-gray-400">${wish.relation || 'Guest'}</span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function handleGuestbook(event) {
+            event.preventDefault();
+            const author = document.getElementById('guestbook-author').value;
+            const relation = document.getElementById('guestbook-relation').value;
+            const text = document.getElementById('guestbook-text').value;
+
+            guestbookWishes.push({ author, relation, text });
+            localStorage.setItem('wedding_wishes', JSON.stringify(guestbookWishes));
+            renderWishes();
+            document.getElementById('guestbook-form').reset();
+        }
+        renderWishes();
+
+        /* ==========================================
+           FAQ ACCORDION
+           ========================================== */
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>
